@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Powered Resume Screening</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="card">
+        <!-- Upload Section -->
+        <h1>AI Resume Screening</h1>
+        <div class="upload-area" id="uploadArea">
+    <p>📂 Drag & Drop PDF Resumes Here</p>
+    <p>or</p>
+    <label for="resume" class="upload-btn">Browse Files</label>
+    <input type="file" id="resume" multiple accept=".pdf" hidden>
+    <div id="fileList"></div>
+</div>
+        <textarea id="jobDescription" placeholder="Paste Job Description here"></textarea>
+        <button onclick="analyze()">Analyze </button>
+    </div>
+
+    <div class="dashboard" id="dashboard" style="display:none;">
+        <div class="dashboard-title">Ranking Dashboard</div>
+        <div id="result"></div>
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
