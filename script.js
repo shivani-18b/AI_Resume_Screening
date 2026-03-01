@@ -29,7 +29,7 @@ async function analyze() {
     try {
         resultDiv.innerHTML = "<p style='color:#00ffff;'>⚡ Analyzing resumes...</p>";
 
-        const response = await fetch("http://127.0.0.1:8000/match", {
+        const response = await fetch("https://ai-resume-screening-phst.onrender.com", {
             method: "POST",
             body: formData
         });
@@ -119,4 +119,5 @@ function displayFileNames(files) {
         : `${files.length} files selected`;
 
     fileList.innerHTML = `📂 ${text}`;
+
 }
